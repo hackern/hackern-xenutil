@@ -1,6 +1,6 @@
 all=xenutil
 
-$(all):
+$(all): xenutil.c
 	cc xenutil.c -o xenutil -lxenstore
 
 clean:
