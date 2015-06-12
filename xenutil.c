@@ -13,7 +13,7 @@ int mkdir(char *path){
 
 int setFullPerm(char *path){
   struct xs_permissions perms = {.id = 0, .perms = XS_PERM_READ|XS_PERM_WRITE}; // Full Permissions
-  if(!xs_set_permissions(xsd, 0, "/rendezvous", &perms, 1)){
+  if(!xs_set_permissions(xsd, 0, path, &perms, 1)){
     printf("Could not set directory permissions.\n");
     return 3;
   }
